@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>javascript Tutorial</title>
+  <link rel="stylesheet" href="master.css">
+</head>
+<body>
+
+<div class="block1">
+
+  <p>верхній лівий кут
+    <input type="range" min="0" max="100" id="rtl" oninput="fun1()">
+    <input type="text" id="ttl" value="0">
+  </p>
+
+  <p>верхній правий кут
+    <input type="range" min="0" max="100" id="rtr" oninput="fun1()">
+    <input type="text" id="ttr" value="0">
+  </p>
+
+  <p>нижній правий кут
+    <input type="range" min="0" max="100" id="rbr" oninput="fun1()">
+    <input type="text" id="tbr" value="0">
+  </p>
+
+  <p>нижній лівий кут
+    <input type="range" min="0" max="100" id="rbl" oninput="fun1()">
+    <input type="text" id="tbl" value="0">
+  </p>
+
+</div>
+
+<div id="block"></div>
+
+  <script>
+
+  function fun1() {
+
+    var rtl = document.getElementById('rtl').value;
+    var rtr = document.getElementById('rtr').value;
+    var rbr = document.getElementById('rbr').value;
+    var rbl = document.getElementById('rbl').value;
+
+    var ttl = document.getElementById('ttl');
+    var ttr = document.getElementById('ttr');
+    var tbr = document.getElementById('tbr');
+    var tbl = document.getElementById('tbl');
+
+    var block = document.getElementById('block');
+
+    ttl.value = rtl;
+    ttr.value = rtr;
+    tbr.value = rbr;
+    tbl.value = rbl;
+
+    block.style.borderRadius = rtl+'px '+rtr+'px '+rbr+'px '+rbl+'px ';
+  }
+
+  </script>
+
+</body>
+</html>
