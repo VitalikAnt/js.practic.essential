@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="test.css">
+
+  <title>javascript Tutorial</title>
+</head>
+<body>
+
+  <select name="" id="mySelect" onchange="fun1()">
+    <option value="">Apple</option>
+    <option value="">Orange</option>
+    <option value="">Pineapple</option>
+    <option value="">Banana</option>
+  </select>
+
+  <script>
+  function fun1() {
+      var sel = document.getElementById('mySelect').selectedIndex;
+      var options = document.getElementById('mySelect').options;
+      alert('Вибрана опція '+options[sel].text);
+  }
+  </script>
+
+<input type="range" min="0" max="100" step="1" oninput="fun2()" id="r1">
+<p id="one"></p>
+<div id="test"></div>
+
+<script>
+  function fun2() {
+    var rng = document.getElementById('r1');
+    var p = document.getElementById('one');
+    p.innerHTML = rng.value;
+
+  }
+</script>
+
+<script>
+function fun2() {
+  var rng = document.getElementById('r1');
+  var div = document.getElementById('test');
+  div.style.width = rng.value+'px';
+}
+</script>
+
+</body>
+</html>
